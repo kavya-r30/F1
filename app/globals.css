@@ -117,3 +117,13 @@
     transform: translateX(0);
   }
 }
+
+@font-face {
+  font-family: 'F1Font';
+  src: url('/fonts/Formula1-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'F1FontW';
+  src: url('/fonts/Formula1-Wide.ttf') format('truetype');
+}
