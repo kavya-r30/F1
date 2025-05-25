@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { ArrowRight } from 'lucide-react';
 import { RaceCard } from "@/components/race-card"
 import { DriverCard } from "@/components/driver-card"
 import { HeroSection } from "@/components/hero-section"
@@ -64,21 +65,7 @@ export default async function Home() {
         <div className="flex justify-end">
           <Link href="/calendar" className="text-primary hover:underline flex items-center gap-1">
             View full calendar
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-arrow-right"
-            >
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
+            <ArrowRight size={16} />
           </Link>
         </div>
       </section>
@@ -103,21 +90,7 @@ export default async function Home() {
           <div className="flex justify-end">
             <Link href="/results" className="text-primary hover:underline flex items-center gap-1">
               View all results
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-arrow-right"
-              >
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
+              <ArrowRight size={16} />
             </Link>
           </div>
         </div>
@@ -138,21 +111,7 @@ export default async function Home() {
         <div className="flex justify-end">
           <Link href="/drivers" className="text-primary hover:underline flex items-center gap-1">
             View all drivers
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-arrow-right"
-            >
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
+            <ArrowRight size={16} />
           </Link>
         </div>
       </section>
@@ -198,7 +157,7 @@ export default async function Home() {
             <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent z-10"></div>
               <img
-                src="/foot1.jpg"
+                src="/landing/foot1.jpg"
                 alt="F1 Data Analysis"
                 className="w-full h-full object-cover"
               />
