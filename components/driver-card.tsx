@@ -20,13 +20,13 @@ export function DriverCard({ driver, index = 0 }: DriverCardProps) {
         animationDelay: `${index * 0.05}s`,
       }}
     >
-      <div className="relative aspect-[7/5] w-full overflow-hidden bg-muted">
+      <div className="relative aspect-[6/5] w-full overflow-hidden bg-muted">
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
         <Image
-          src={driver.image_url || `/placeholder.svg?height=300&width=200`}
-          alt={`${driver.name} portrait`}
+          src={`/drivers/crop/${driver.name}.png`}
+          alt={`${driver.name}`}
           fill
-          className="object-cover transition-transform group-hover:scale-105"
+          className="object-cover transition-transform group-hover:scale-105 bg-white dark:bg-sky-950"
         />
         <div className="absolute bottom-0 left-0 z-20 p-3 text-white">
           <p className="text-lg font-bold leading-tight">{driver.name}</p>

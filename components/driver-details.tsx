@@ -41,9 +41,9 @@ export function DriverDetails({ driver, currentSeasonStats, allSeasonsStats }: D
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="md:col-span-1 opacity-0 animate-[fadeIn_0.5s_forwards]">
-          <div className="rounded-lg overflow-hidden bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 aspect-square relative">
+          <div className="rounded-lg overflow-hidden bg-white dark:from-gray-800 dark:to-gray-900 aspect-[6/5] relative">
             <Image
-              src={getDriverImageUrl(driver.number) || "/placeholder.svg"}
+              src={`/drivers/crop/${driver.name}.png`}
               alt={driver.name}
               fill
               className="object-cover"
