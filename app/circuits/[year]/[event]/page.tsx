@@ -5,15 +5,15 @@ import { CircuitDetails } from "@/components/circuit-details"
 import { notFound } from "next/navigation"
 
 interface CircuitPageProps {
-  params: {
+  params: Promise<{
     year: string
     event: string
-  }
+  }>
 }
 
 export async function generateMetadata({ params }: CircuitPageProps) {
   try {
-    const { year, event } = params
+    const { year, event } = await params
     const circuitInfo = await getCircuitInfo(Number.parseInt(year), event)
 
     return {
@@ -28,8 +28,8 @@ export async function generateMetadata({ params }: CircuitPageProps) {
   }
 }
 
-export default function CircuitPage({ params }: CircuitPageProps) {
-  const { year, event } = params
+export default async function CircuitPage({ params }: CircuitPageProps) {
+  const { year, event } = await params
 
   return (
     <main className="container py-8">
