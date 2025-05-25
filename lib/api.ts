@@ -416,6 +416,27 @@ export interface ConstructorStanding {
   drivers: string[]
 }
 
+export interface RacePositionData {
+  year: number
+  event: string
+  event_round: number
+  drivers: string[]
+  race_positions: Record<
+    string,
+    {
+      driver: string
+      driver_name: string
+      abbreviation: string
+      team: string
+      team_color: string
+      positions: {
+        lap: number
+        position: number
+      }[]
+    }
+  >
+}
+
 export async function getEvents(year?: number): Promise<Event[]> {
   const endpoint = year ? `/events?year=${year}` : "/events"
   const cacheKey = `events_${year || "all"}`
@@ -494,6 +515,15 @@ export async function getTrackPositions(year: number, event: string, session: st
 
   return fetchWithCache(async () => {
     return await fetchApi<any>(endpoint)
+  }, cacheKey)
+}
+
+export async function getRacePositions(year: number, event: string): Promise<RacePositionData> {
+  const endpoint = `/position/race?year=${year}&event=${event}`
+  const cacheKey = `race_positions_${year}_${event}`
+
+  return fetchWithCache(async () => {
+    return await fetchApi<RacePositionData>(endpoint)
   }, cacheKey)
 }
 
