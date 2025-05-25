@@ -6,14 +6,14 @@ import { notFound } from "next/navigation"
 import { fallbackDrivers } from "@/lib/fallback-data"
 
 interface DriverPageProps {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
 export async function generateMetadata({ params }: DriverPageProps) {
   try {
-    const { id } = params
+    const { id } = await params
     let driver = null
 
     try {
@@ -49,8 +49,8 @@ export async function generateMetadata({ params }: DriverPageProps) {
   }
 }
 
-export default function DriverPage({ params }: DriverPageProps) {
-  const { id } = params
+export default async function DriverPage({ params }: DriverPageProps) {
+  const { id } = await params
 
   return (
     <main className="container py-8">

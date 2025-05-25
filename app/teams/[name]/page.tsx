@@ -6,14 +6,14 @@ import { fallbackTeams } from "@/lib/fallback-data"
 import { getTeamProfile, getTeamStatistics } from "@/lib/api"
 
 interface TeamPageProps {
-  params: {
+  params: Promise<{
     name: string
-  }
+  }>
 }
 
 export async function generateMetadata({ params }: TeamPageProps) {
   try {
-    const { name } = params
+    const { name } = await params
     const decodedName = decodeURIComponent(name)
 
     try {
@@ -23,7 +23,6 @@ export async function generateMetadata({ params }: TeamPageProps) {
         description: `Explore ${teamProfile.name}'s Formula 1 statistics and performance data`,
       }
     } catch (error) {
-      // If API fails, try to get team from fallback data
       const team = fallbackTeams.find((t) => t.name === decodedName)
       if (team) {
         return {
@@ -45,8 +44,8 @@ export async function generateMetadata({ params }: TeamPageProps) {
   }
 }
 
-export default function TeamPage({ params }: TeamPageProps) {
-  const { name } = params
+export default async function TeamPage({ params }: TeamPageProps) {
+  const { name } = await params
   const decodedName = decodeURIComponent(name)
 
   return (
