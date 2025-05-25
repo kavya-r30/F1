@@ -71,6 +71,13 @@ export interface CircuitInfo {
   country: string
   location: string
   track_layout: string
+  first_grand_prix: string
+  number_of_laps: number
+  circuit_length: number
+  race_distance: number
+  lap_record_time: string
+  lap_record_driver: string
+  lap_record_year: number
 }
 
 export interface TelemetryData {
