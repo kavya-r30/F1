@@ -8,10 +8,15 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata: Metadata = {
-  title: "F1 Data Visualization",
-  description: "Explore Formula 1 telemetry, lap data, race strategies, and circuit information",
-  generator: "v0.dev",
+export const metadata = {
+  title: "F1 Insights",
+  description: `Experience Formula 1 like never before with our advanced data-driven platform designed for 
+fans, analysts, and professionals alike to gain unparalleled insights and features to 
+compare drivers, analyze telemetry, and explore race strategies and unlock the full 
+story behind every lap, overtake, and pit stop.`,
+  icons: {
+    icon: "/favicon.svg",
+  },
 }
 
 export default function RootLayout({
