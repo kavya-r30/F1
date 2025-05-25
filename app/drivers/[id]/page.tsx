@@ -20,7 +20,6 @@ export async function generateMetadata({ params }: DriverPageProps) {
       driver = await getDriverProfile(id)
     } catch (error) {
       console.error("Error fetching driver profile from API:", error)
-      // Try to find driver in fallback data
       const fallbackDriver = fallbackDrivers.find((d) => d.driver_number === id)
       if (fallbackDriver) {
         driver = {
@@ -64,7 +63,6 @@ export default function DriverPage({ params }: DriverPageProps) {
 
 async function DriverContent({ driverId }: { driverId: string }) {
   try {
-    // Try to fetch driver profile from API
     let driver = null
     let currentSeasonStats = null
     let allSeasonsStats = null
