@@ -33,17 +33,13 @@ export function TeamDetails({ profile, statistics }: TeamDetailsProps) {
     history: statistics.history || [],
   }
 
-  const getTeamImageUrl = (teamName: string) => {
-    return `/placeholder.svg?height=300&width=300&text=${encodeURIComponent(teamName)}`
-  }
-
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="md:col-span-1 opacity-0 animate-[fadeIn_0.5s_forwards]">
-          <div className="rounded-lg overflow-hidden bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 aspect-square relative">
+        <div className="md:col-span-1 opacity-0 animate-[fadeIn_0.5s_forwards] pt-3">
+          <div className="rounded-lg overflow-hidden bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 aspect-[4/3] relative">
             <Image
-              src={getTeamImageUrl(profile.name) || "/placeholder.svg"}
+              src={`/teams/${profile.name}.jpg` || '/placeholder.svg'}
               alt={profile.name}
               fill
               className="object-cover"

@@ -16,8 +16,8 @@ export function TeamCard({ team, index = 0 }: TeamCardProps) {
       <div className="relative aspect-video w-full overflow-hidden bg-muted">
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
         <img
-          src={team.image_url || `/placeholder.svg?height=200&width=400&text=${team.name}`}
-          alt={`${team.name} car`}
+          src={`/teams/${team.name}.jpg` || '/placeholder.svg'}
+          alt={`${team.name}`}
           className="h-full w-full object-cover transition-transform group-hover:scale-105"
         />
         <div className="absolute bottom-0 left-0 z-20 p-3 text-white">
