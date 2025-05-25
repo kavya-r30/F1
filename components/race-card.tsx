@@ -5,6 +5,8 @@ interface RaceCardProps {
   event: any
   isRecent?: boolean
   index?: number
+  isPast?: boolean
+  isNextRace?: boolean 
 }
 
 export function RaceCard({ event, isRecent = false, index = 0 }: RaceCardProps) {
