@@ -6,7 +6,7 @@ export function HeroSection() {
     <section className="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/placeholder.svg?height=1080&width=1920"
+          src="/land3.jpeg"
           alt="Formula 1 race"
           fill
           className="object-cover brightness-50"
@@ -32,10 +32,10 @@ export function HeroSection() {
 
         <div className="flex flex-col sm:flex-row gap-4 mt-4 opacity-1 translate-y-4 animate-[fadeUp_0.7s_0.6s_forwards]">
           <Link
-            href="/telemetry"
+            href="/race-strategy"
             className="bg-f1-red hover:bg-red-700 text-white px-8 py-3 rounded-md font-medium transition-colors"
           >
-            Explore Telemetry
+            Explore Strategy
           </Link>
           <Link
             href="/lap-comparison"
