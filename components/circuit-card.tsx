@@ -15,8 +15,8 @@ export function CircuitCard({ circuit, index = 0 }: CircuitCardProps) {
       <div className="relative aspect-[16/9] w-full overflow-hidden bg-muted">
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
         <img
-          src={circuit.image_url || `/placeholder.svg?height=300&width=500&text=${circuit.name}`}
-          alt={`${circuit.name} circuit`}
+          src={`/races/${circuit.event}.jpg`}
+          alt={`${circuit.name}`}
           className="h-full w-full object-cover transition-transform group-hover:scale-110"
         />
         <div className="absolute bottom-0 left-0 z-20 p-4 text-white">
