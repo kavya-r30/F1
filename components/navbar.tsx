@@ -96,7 +96,7 @@ export function Navbar() {
                       <NavigationMenuLink asChild>
                         <a
                           className="flex h-full w-full select-none flex-col justify-between rounded-md bg-cover bg-center p-5 no-underline outline-none focus:shadow-md"
-                          style={{ backgroundImage: "url('/nav.jpeg')" }}
+                          style={{ backgroundImage: "url('/navbar/nav.jpeg')" }}
                           href="/circuits"
                         >
                           <div className="text-lg font-medium text-white" style={{fontFamily: 'F1Font'}}>F1 Circuits</div>
@@ -137,7 +137,7 @@ export function Navbar() {
                       <NavigationMenuLink asChild>
                         <a
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-cover bg-center p-5 no-underline outline-none focus:shadow-md"
-                          style={{ backgroundImage: "radial-gradient(circle at center, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.2) 100%), url('/nav2.jpeg')" }}
+                          style={{ backgroundImage: "radial-gradient(circle at center, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.2) 100%), url('/navbar/nav2.jpeg')" }}
                           href="/championship"
                         >
                           <div className="text-lg font-semibold text-f1-red" style={{ fontFamily: 'F1Font' }}>
@@ -178,7 +178,7 @@ export function Navbar() {
                       <NavigationMenuLink asChild>
                         <a
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-cover bg-center p-5 no-underline outline-none focus:shadow-md"
-                          style={{ backgroundImage: "url('/nav3.jpg')" }}
+                          style={{ backgroundImage: "url('/navbar/nav3.jpg')" }}
                           href="/positions"
                         >
                           <div className="text-lg font-medium text-white" style={{ fontFamily: 'F1Font' }}>
