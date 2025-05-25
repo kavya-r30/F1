@@ -25,8 +25,8 @@ export function RaceCard({ event, isRecent = false, index = 0 }: RaceCardProps) 
       <div className="relative aspect-video w-full overflow-hidden bg-muted">
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
         <img
-          src={event.image_url || `/placeholder.svg?height=300&width=500&text=${event.event_name}`}
-          alt={`${event.event_name} circuit`}
+          src={event.image_url || `/races/${event.name}.jpg`}
+          alt={`${event.name}`}
           className="h-full w-full object-cover transition-transform group-hover:scale-110"
         />
         <div className="absolute bottom-0 left-0 z-20 p-4 text-white">
