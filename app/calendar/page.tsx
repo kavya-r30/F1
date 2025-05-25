@@ -45,14 +45,14 @@ async function CalendarContent() {
 
   return (
     <Tabs defaultValue="upcoming" className="w-full">
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
         <TabsList>
           <TabsTrigger value="upcoming">Upcoming Races</TabsTrigger>
           <TabsTrigger value="past">Past Races</TabsTrigger>
           <TabsTrigger value="all">All Races</TabsTrigger>
         </TabsList>
 
-        <div className="text-sm text-muted-foreground">
+        <div className="text-sm text-muted-foreground sm:pt-0 pt-6">
           {currentYear} Season • {events.length} Races
         </div>
       </div>
